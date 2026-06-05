@@ -1,39 +1,39 @@
-/localhome/local-triv/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+/localhome/local-triv/benchmark/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
   import pynvml  # type: ignore[import]
-benchmark_args=Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/nsight-profiles/dataset_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=32, sharegpt_output_len=20, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=32, output_file='/localhome/local-triv/nsight-profiles/sglang_c32_warmup/bench.jsonl', output_details=False, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=True, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
-Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/nsight-profiles/dataset_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=32, sharegpt_output_len=20, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=32, output_file='/localhome/local-triv/nsight-profiles/sglang_c32_warmup/bench.jsonl', output_details=False, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=True, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+benchmark_args=Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/benchmark/nsight-profiles/dataset_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=32, sharegpt_output_len=20, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=32, output_file='/localhome/local-triv/benchmark/nsight-profiles/sglang_c32_warmup/bench.jsonl', output_details=False, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=True, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/benchmark/nsight-profiles/dataset_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=32, sharegpt_output_len=20, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=32, output_file='/localhome/local-triv/benchmark/nsight-profiles/sglang_c32_warmup/bench.jsonl', output_details=False, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=True, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
 
 #Input tokens: 32032
 #Output tokens: 640
 Starting warmup with 1 sequences...
 Warmup completed with 1 sequences. Starting main benchmark run...
-  0%|          | 0/32 [00:00<?, ?it/s]  3%|▎         | 1/32 [00:02<01:30,  2.92s/it]100%|██████████| 32/32 [00:02<00:00, 10.85it/s]
+  0%|          | 0/32 [00:00<?, ?it/s]  3%|▎         | 1/32 [00:02<01:30,  2.93s/it]100%|██████████| 32/32 [00:02<00:00, 10.82it/s]
 
 ============ Serving Benchmark Result ============
 Backend:                                 sglang    
 Traffic request rate:                    inf       
 Max request concurrency:                 32        
 Successful requests:                     32        
-Benchmark duration (s):                  2.95      
+Benchmark duration (s):                  2.96      
 Total input tokens:                      32032     
 Total generated tokens:                  640       
 Total generated tokens (retokenized):    640       
-Request throughput (req/s):              10.83     
-Input token throughput (tok/s):          10844.05  
-Output token throughput (tok/s):         216.66    
-Total token throughput (tok/s):          11060.72  
-Concurrency:                             31.85     
+Request throughput (req/s):              10.80     
+Input token throughput (tok/s):          10808.61  
+Output token throughput (tok/s):         215.96    
+Total token throughput (tok/s):          11024.56  
+Concurrency:                             31.86     
 ----------------End-to-End Latency----------------
-Mean E2E Latency (ms):                   2940.44   
-Median E2E Latency (ms):                 2940.74   
+Mean E2E Latency (ms):                   2950.26   
+Median E2E Latency (ms):                 2950.87   
 ---------------Time to First Token----------------
-Mean TTFT (ms):                          1664.66   
-Median TTFT (ms):                        1448.11   
-P99 TTFT (ms):                           2627.88   
+Mean TTFT (ms):                          1677.21   
+Median TTFT (ms):                        1464.64   
+P99 TTFT (ms):                           2637.99   
 ---------------Inter-Token Latency----------------
-Mean ITL (ms):                           67.15     
-Median ITL (ms):                         15.83     
-P95 ITL (ms):                            26.68     
-P99 ITL (ms):                            1863.45   
-Max ITL (ms):                            2506.01   
+Mean ITL (ms):                           67.00     
+Median ITL (ms):                         15.79     
+P95 ITL (ms):                            26.74     
+P99 ITL (ms):                            1858.98   
+Max ITL (ms):                            2515.17   
 ==================================================
