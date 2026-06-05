@@ -1,0 +1,26 @@
+engine,concurrency,category,n_kernels,total_ms,pct_of_gpu_work
+sglang,32,GEMM (Linear),658,1941.7884,72.4134
+sglang,32,Attention,243,188.9828,7.0476
+sglang,32,Sampling/Reduce,153,2.4068,0.0898
+sglang,32,Norm/Act/RoPE,697,94.1589,3.5114
+sglang,32,Elementwise/Index,1186,35.4974,1.3238
+sglang,32,Other,65,1.4371,0.0536
+sglang,32,Memory (H2D/D2H/D2D),321,0.8495,0.0317
+sglang,32,CUDA Graph (model fwd),33,416.4097,15.5288
+vllm,32,GEMM (Linear),134,83.8778,3.7740
+vllm,32,Sampling/Reduce,536,63.1132,2.8397
+vllm,32,Elementwise/Index,1898,13.2601,0.5966
+vllm,32,Memory (H2D/D2H/D2D),1480,26.2262,1.1800
+vllm,32,CUDA Graph (model fwd),138,2036.0320,91.6096
+sglang,2,Attention,204,0.7212,0.0604
+sglang,2,Sampling/Reduce,307,5.1600,0.4322
+sglang,2,Elementwise/Index,929,3.2428,0.2716
+sglang,2,Other,102,0.2093,0.0175
+sglang,2,Memory (H2D/D2H/D2D),616,1.3449,0.1126
+sglang,2,CUDA Graph (model fwd),107,1183.3154,99.1057
+vllm,2,GEMM (Linear),64,37.8025,4.9258
+vllm,2,Sampling/Reduce,258,12.9476,1.6871
+vllm,2,Elementwise/Index,1282,4.7925,0.6245
+vllm,2,Other,699,22.0969,2.8793
+vllm,2,Memory (H2D/D2H/D2D),771,2.5907,0.3376
+vllm,2,CUDA Graph (model fwd),68,687.2124,89.5458
