@@ -1,0 +1,39 @@
+/localhome/local-triv/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+benchmark_args=Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='random', dataset_path='', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=48, sharegpt_output_len=None, sharegpt_context_len=None, random_input_len=1000, random_output_len=1000, random_range_ratio=0.0, request_rate=inf, max_concurrency=16, output_file='/localhome/local-triv/sglang-bench/results/llama8b_1k1k_tp1_sglang_ver2/concurrency=16/bench_results.jsonl', output_details=True, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='random', dataset_path='', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=48, sharegpt_output_len=None, sharegpt_context_len=None, random_input_len=1000, random_output_len=1000, random_range_ratio=0.0, request_rate=inf, max_concurrency=16, output_file='/localhome/local-triv/sglang-bench/results/llama8b_1k1k_tp1_sglang_ver2/concurrency=16/bench_results.jsonl', output_details=True, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+
+#Input tokens: 24951
+#Output tokens: 22399
+Starting warmup with 1 sequences...
+Warmup completed with 1 sequences. Starting main benchmark run...
+  0%|          | 0/48 [00:00<?, ?it/s]  2%|▏         | 1/48 [00:01<01:23,  1.78s/it]  4%|▍         | 2/48 [00:03<01:22,  1.79s/it]  6%|▋         | 3/48 [00:04<00:58,  1.31s/it]  8%|▊         | 4/48 [00:04<00:46,  1.05s/it] 12%|█▎        | 6/48 [00:05<00:27,  1.51it/s] 15%|█▍        | 7/48 [00:06<00:24,  1.67it/s] 17%|█▋        | 8/48 [00:06<00:23,  1.68it/s] 19%|█▉        | 9/48 [00:06<00:20,  1.88it/s] 21%|██        | 10/48 [00:07<00:20,  1.86it/s] 25%|██▌       | 12/48 [00:09<00:24,  1.49it/s] 27%|██▋       | 13/48 [00:09<00:21,  1.63it/s] 29%|██▉       | 14/48 [00:10<00:21,  1.62it/s] 31%|███▏      | 15/48 [00:10<00:18,  1.81it/s] 33%|███▎      | 16/48 [00:11<00:17,  1.81it/s] 35%|███▌      | 17/48 [00:11<00:14,  2.21it/s] 38%|███▊      | 18/48 [00:11<00:12,  2.45it/s] 40%|███▉      | 19/48 [00:11<00:10,  2.79it/s] 42%|████▏     | 20/48 [00:12<00:09,  2.93it/s] 44%|████▍     | 21/48 [00:13<00:18,  1.50it/s] 46%|████▌     | 22/48 [00:14<00:20,  1.29it/s] 48%|████▊     | 23/48 [00:15<00:23,  1.08it/s] 50%|█████     | 24/48 [00:16<00:18,  1.32it/s] 52%|█████▏    | 25/48 [00:16<00:15,  1.50it/s] 54%|█████▍    | 26/48 [00:17<00:17,  1.27it/s] 56%|█████▋    | 27/48 [00:20<00:27,  1.33s/it] 58%|█████▊    | 28/48 [00:22<00:27,  1.40s/it] 60%|██████    | 29/48 [00:25<00:38,  2.01s/it] 62%|██████▎   | 30/48 [00:25<00:27,  1.52s/it] 65%|██████▍   | 31/48 [00:26<00:21,  1.27s/it] 67%|██████▋   | 32/48 [00:26<00:15,  1.02it/s] 69%|██████▉   | 33/48 [00:27<00:13,  1.11it/s] 71%|███████   | 34/48 [00:29<00:15,  1.12s/it] 73%|███████▎  | 35/48 [00:29<00:10,  1.18it/s] 75%|███████▌  | 36/48 [00:30<00:09,  1.27it/s] 77%|███████▋  | 37/48 [00:31<00:11,  1.01s/it] 79%|███████▉  | 38/48 [00:33<00:12,  1.26s/it] 81%|████████▏ | 39/48 [00:34<00:10,  1.11s/it] 83%|████████▎ | 40/48 [00:35<00:09,  1.22s/it] 85%|████████▌ | 41/48 [00:36<00:06,  1.03it/s] 88%|████████▊ | 42/48 [00:36<00:04,  1.23it/s] 90%|████████▉ | 43/48 [00:36<00:03,  1.60it/s] 92%|█████████▏| 44/48 [00:37<00:02,  1.45it/s] 94%|█████████▍| 45/48 [00:40<00:04,  1.51s/it] 96%|█████████▌| 46/48 [00:41<00:02,  1.11s/it] 98%|█████████▊| 47/48 [00:41<00:00,  1.19it/s]100%|██████████| 48/48 [00:49<00:00,  2.97s/it]100%|██████████| 48/48 [00:49<00:00,  1.03s/it]
+
+============ Serving Benchmark Result ============
+Backend:                                 sglang    
+Traffic request rate:                    inf       
+Max request concurrency:                 16        
+Successful requests:                     48        
+Benchmark duration (s):                  49.33     
+Total input tokens:                      24951     
+Total generated tokens:                  22399     
+Total generated tokens (retokenized):    22398     
+Request throughput (req/s):              0.97      
+Input token throughput (tok/s):          505.77    
+Output token throughput (tok/s):         454.04    
+Total token throughput (tok/s):          959.82    
+Concurrency:                             11.57     
+----------------End-to-End Latency----------------
+Mean E2E Latency (ms):                   11889.68  
+Median E2E Latency (ms):                 9796.56   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          318.65    
+Median TTFT (ms):                        160.72    
+P99 TTFT (ms):                           882.72    
+---------------Inter-Token Latency----------------
+Mean ITL (ms):                           24.85     
+Median ITL (ms):                         22.56     
+P95 ITL (ms):                            47.20     
+P99 ITL (ms):                            99.85     
+Max ITL (ms):                            822.58    
+==================================================

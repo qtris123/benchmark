@@ -1,0 +1,57 @@
+/localhome/local-triv/Test-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+Capture range started in the application.
+Capture range ended in the application.
+Generating '/tmp/nsys-report-c965.qdstrm'
+[1/7] [0%                          ] triton_sum.nsys-repProcessing events...
+[1/7] [0%                          ] triton_sum.nsys-rep[1/7] [6%                          ] triton_sum.nsys-rep[1/7] [=========44%                ] triton_sum.nsys-rep[1/7] [===============65%          ] triton_sum.nsys-rep[1/7] [=====================86%    ] triton_sum.nsys-rep[1/7] [========================100%] triton_sum.nsys-rep[1/7] [========================100%] triton_sum.nsys-rep
+[2/7] [0%                          ] triton_sum.sqlite[2/7] [1%                          ] triton_sum.sqlite[2/7] [2%                          ] triton_sum.sqlite[2/7] [3%                          ] triton_sum.sqlite[2/7] [4%                          ] triton_sum.sqlite[2/7] [5%                          ] triton_sum.sqlite[2/7] [6%                          ] triton_sum.sqlite[2/7] [7%                          ] triton_sum.sqlite[2/7] [8%                          ] triton_sum.sqlite[2/7] [9%                          ] triton_sum.sqlite[2/7] [10%                         ] triton_sum.sqlite[2/7] [11%                         ] triton_sum.sqlite[2/7] [12%                         ] triton_sum.sqlite[2/7] [13%                         ] triton_sum.sqlite[2/7] [14%                         ] triton_sum.sqlite[2/7] [=15%                        ] triton_sum.sqlite[2/7] [=16%                        ] triton_sum.sqlite[2/7] [=17%                        ] triton_sum.sqlite[2/7] [==18%                       ] triton_sum.sqlite[2/7] [==19%                       ] triton_sum.sqlite[2/7] [==20%                       ] triton_sum.sqlite[2/7] [==21%                       ] triton_sum.sqlite[2/7] [===22%                      ] triton_sum.sqlite[2/7] [===23%                      ] triton_sum.sqlite[2/7] [===24%                      ] triton_sum.sqlite[2/7] [====25%                     ] triton_sum.sqlite[2/7] [====26%                     ] triton_sum.sqlite[2/7] [====27%                     ] triton_sum.sqlite[2/7] [====28%                     ] triton_sum.sqlite[2/7] [=====29%                    ] triton_sum.sqlite[2/7] [=====30%                    ] triton_sum.sqlite[2/7] [=====31%                    ] triton_sum.sqlite[2/7] [=====32%                    ] triton_sum.sqlite[2/7] [======33%                   ] triton_sum.sqlite[2/7] [======34%                   ] triton_sum.sqlite[2/7] [======35%                   ] triton_sum.sqlite[2/7] [=======36%                  ] triton_sum.sqlite[2/7] [=======37%                  ] triton_sum.sqlite[2/7] [=======38%                  ] triton_sum.sqlite[2/7] [=======39%                  ] triton_sum.sqlite[2/7] [========40%                 ] triton_sum.sqlite[2/7] [========41%                 ] triton_sum.sqlite[2/7] [========42%                 ] triton_sum.sqlite[2/7] [=========43%                ] triton_sum.sqlite[2/7] [=========44%                ] triton_sum.sqlite[2/7] [=========45%                ] triton_sum.sqlite[2/7] [=========46%                ] triton_sum.sqlite[2/7] [==========47%               ] triton_sum.sqlite[2/7] [==========48%               ] triton_sum.sqlite[2/7] [==========49%               ] triton_sum.sqlite[2/7] [===========50%              ] triton_sum.sqlite[2/7] [===========51%              ] triton_sum.sqlite[2/7] [===========52%              ] triton_sum.sqlite[2/7] [===========53%              ] triton_sum.sqlite[2/7] [============54%             ] triton_sum.sqlite[2/7] [============55%             ] triton_sum.sqlite[2/7] [============56%             ] triton_sum.sqlite[2/7] [============57%             ] triton_sum.sqlite[2/7] [=============58%            ] triton_sum.sqlite[2/7] [=============59%            ] triton_sum.sqlite[2/7] [=============60%            ] triton_sum.sqlite[2/7] [==============61%           ] triton_sum.sqlite[2/7] [==============62%           ] triton_sum.sqlite[2/7] [==============63%           ] triton_sum.sqlite[2/7] [==============64%           ] triton_sum.sqlite[2/7] [===============65%          ] triton_sum.sqlite[2/7] [===============66%          ] triton_sum.sqlite[2/7] [===============67%          ] triton_sum.sqlite[2/7] [================68%         ] triton_sum.sqlite[2/7] [================69%         ] triton_sum.sqlite[2/7] [================70%         ] triton_sum.sqlite[2/7] [================71%         ] triton_sum.sqlite[2/7] [=================72%        ] triton_sum.sqlite[2/7] [=================73%        ] triton_sum.sqlite[2/7] [=================74%        ] triton_sum.sqlite[2/7] [==================75%       ] triton_sum.sqlite[2/7] [==================76%       ] triton_sum.sqlite[2/7] [==================77%       ] triton_sum.sqlite[2/7] [==================78%       ] triton_sum.sqlite[2/7] [===================79%      ] triton_sum.sqlite[2/7] [===================80%      ] triton_sum.sqlite[2/7] [===================81%      ] triton_sum.sqlite[2/7] [===================82%      ] triton_sum.sqlite[2/7] [====================83%     ] triton_sum.sqlite[2/7] [====================84%     ] triton_sum.sqlite[2/7] [====================85%     ] triton_sum.sqlite[2/7] [=====================86%    ] triton_sum.sqlite[2/7] [=====================87%    ] triton_sum.sqlite[2/7] [=====================88%    ] triton_sum.sqlite[2/7] [=====================89%    ] triton_sum.sqlite[2/7] [======================90%   ] triton_sum.sqlite[2/7] [======================91%   ] triton_sum.sqlite[2/7] [======================92%   ] triton_sum.sqlite[2/7] [=======================93%  ] triton_sum.sqlite[2/7] [=======================94%  ] triton_sum.sqlite[2/7] [=======================95%  ] triton_sum.sqlite[2/7] [=======================96%  ] triton_sum.sqlite[2/7] [========================97% ] triton_sum.sqlite[2/7] [========================98% ] triton_sum.sqlite[2/7] [========================99% ] triton_sum.sqlite[2/7] [========================100%] triton_sum.sqlite[2/7] [========================100%] triton_sum.sqlite
+[3/7] Executing 'nvtx_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)   Style                Range              
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  -------  --------------------------------
+     45.1       93,438,349          1  93,438,349.0  93,438,349.0  93,438,349  93,438,349          0.0  PushPop  :TRITON_SUM_N128M_bs512_iters100
+     24.9       51,622,180          1  51,622,180.0  51,622,180.0  51,622,180  51,622,180          0.0  PushPop  :TRITON_SUM_N64M_bs512_iters100 
+     10.1       20,837,027          1  20,837,027.0  20,837,027.0  20,837,027  20,837,027          0.0  PushPop  :WARMUP_N128M                   
+      6.5       13,470,345          1  13,470,345.0  13,470,345.0  13,470,345  13,470,345          0.0  PushPop  :TRITON_SUM_N16M_bs512_iters100 
+      5.1       10,626,121          1  10,626,121.0  10,626,121.0  10,626,121  10,626,121          0.0  PushPop  :WARMUP_N64M                    
+      2.7        5,509,367          1   5,509,367.0   5,509,367.0   5,509,367   5,509,367          0.0  PushPop  :TRITON_SUM_N4M_bs512_iters100  
+      2.7        5,492,077          1   5,492,077.0   5,492,077.0   5,492,077   5,492,077          0.0  PushPop  :TRITON_SUM_N1M_bs512_iters100  
+      1.5        3,070,884          1   3,070,884.0   3,070,884.0   3,070,884   3,070,884          0.0  PushPop  :WARMUP_N16M                    
+      0.7        1,499,828          1   1,499,828.0   1,499,828.0   1,499,828   1,499,828          0.0  PushPop  :WARMUP_N1M                     
+      0.7        1,477,253          1   1,477,253.0   1,477,253.0   1,477,253   1,477,253          0.0  PushPop  :WARMUP_N4M                     
+
+[4/7] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)     Med (ns)    Min (ns)    Max (ns)   StdDev (ns)               Name            
+ --------  ---------------  ---------  ------------  -----------  ---------  ----------  ------------  ----------------------------
+     95.8      171,918,955         10  17,191,895.5  4,768,672.5      7,960  87,982,849  28,730,599.2  cudaDeviceSynchronize       
+      2.8        4,960,978        600       8,268.3      7,923.0      7,439      60,406       2,442.0  cuLaunchKernel              
+      0.7        1,261,686          1   1,261,686.0  1,261,686.0  1,261,686   1,261,686           0.0  cudaHostAlloc               
+      0.7        1,184,331          7     169,190.1    175,614.0    134,947     192,640      23,217.6  cudaMalloc                  
+      0.0           82,102          5      16,420.4     13,226.0     12,889      28,567       6,807.8  cudaMemcpyAsync             
+      0.0           62,655          5      12,531.0     11,382.0     10,640      16,273       2,376.1  cudaStreamSynchronize       
+      0.0           15,592          1      15,592.0     15,592.0     15,592      15,592           0.0  cuProfilerStart             
+      0.0           13,595          7       1,942.1      1,876.0      1,497       2,827         450.7  cudaStreamIsCapturing_v10000
+
+[5/7] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)   StdDev (ns)     Name   
+ --------  ---------------  ---------  ---------  ---------  --------  ---------  -----------  ----------
+    100.0      196,436,967        600  327,394.9  132,001.5     7,424  1,037,259    360,516.0  add_kernel
+
+[6/7] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count  Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)           Operation          
+ --------  ---------------  -----  --------  --------  --------  --------  -----------  ----------------------------
+    100.0           18,496      5   3,699.2   3,808.0     2,976     4,320        622.0  [CUDA memcpy Device-to-Host]
+
+[7/7] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+      0.000      5     0.000     0.000     0.000     0.000        0.000  [CUDA memcpy Device-to-Host]
+
+Generated:
+    /localhome/local-triv/nvidia_nsight_systems/profiles-sum/triton_sum.nsys-rep
+    /localhome/local-triv/nvidia_nsight_systems/profiles-sum/triton_sum.sqlite

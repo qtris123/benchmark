@@ -1,0 +1,368 @@
+/localhome/local-triv/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/localhome/local-triv/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+[2026-06-05 09:26:55] server_args=ServerArgs(model_path='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer_path='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer_mode='auto', skip_tokenizer_init=False, load_format='auto', model_loader_extra_config='{}', trust_remote_code=False, context_length=None, is_embedding=False, enable_multimodal=None, revision=None, model_impl='auto', host='127.0.0.1', port=30000, skip_server_warmup=False, warmups=None, nccl_port=None, dtype='auto', quantization=None, quantization_param_path=None, kv_cache_dtype='auto', mem_fraction_static=0.9, max_running_requests=256, max_queued_requests=9223372036854775807, max_total_tokens=None, chunked_prefill_size=8192, max_prefill_tokens=16384, schedule_policy='fcfs', schedule_conservativeness=1.0, cpu_offload_gb=0, page_size=1, hybrid_kvcache_ratio=None, swa_full_tokens_ratio=0.8, disable_hybrid_swa_memory=False, device='cuda', tp_size=1, pp_size=1, max_micro_batch_size=None, stream_interval=1, stream_output=False, random_seed=717780781, constrained_json_whitespace_pattern=None, watchdog_timeout=300, dist_timeout=None, download_dir=None, base_gpu_id=0, gpu_id_step=1, sleep_on_idle=False, log_level='info', log_level_http=None, log_requests=False, log_requests_level=0, crash_dump_folder=None, show_time_cost=False, enable_metrics=False, enable_metrics_for_all_schedulers=False, bucket_time_to_first_token=None, bucket_inter_token_latency=None, bucket_e2e_request_latency=None, collect_tokens_histogram=False, decode_log_interval=40, enable_request_time_stats_logging=False, kv_events_config=None, api_key=None, served_model_name='meta-llama/Meta-Llama-3.1-8B-Instruct', chat_template=None, completion_template=None, file_storage_path='sglang_storage', enable_cache_report=False, reasoning_parser=None, tool_call_parser=None, dp_size=1, load_balance_method='round_robin', dist_init_addr=None, nnodes=1, node_rank=0, json_model_override_args='{}', preferred_sampling_params=None, enable_lora=None, max_lora_rank=None, lora_target_modules=None, lora_paths=None, max_loras_per_batch=8, lora_backend='triton', attention_backend='triton', decode_attention_backend=None, prefill_attention_backend=None, sampling_backend='flashinfer', grammar_backend='xgrammar', mm_attention_backend=None, speculative_algorithm=None, speculative_draft_model_path=None, speculative_num_steps=None, speculative_eagle_topk=None, speculative_num_draft_tokens=None, speculative_accept_threshold_single=1.0, speculative_accept_threshold_acc=1.0, speculative_token_map=None, ep_size=1, enable_ep_moe=False, enable_deepep_moe=False, enable_flashinfer_cutlass_moe=False, enable_flashinfer_trtllm_moe=False, enable_flashinfer_allreduce_fusion=False, deepep_mode='auto', ep_num_redundant_experts=0, ep_dispatch_algorithm='static', init_expert_location='trivial', enable_eplb=False, eplb_algorithm='auto', eplb_rebalance_num_iterations=1000, eplb_rebalance_layers_per_chunk=None, expert_distribution_recorder_mode=None, expert_distribution_recorder_buffer_size=1000, enable_expert_distribution_metrics=False, deepep_config=None, moe_dense_tp_size=None, enable_hierarchical_cache=False, hicache_ratio=2.0, hicache_size=0, hicache_write_policy='write_through_selective', hicache_io_backend='', hicache_storage_backend=None, enable_double_sparsity=False, ds_channel_config_path=None, ds_heavy_channel_num=32, ds_heavy_token_num=256, ds_heavy_channel_type='qk', ds_sparse_decode_threshold=4096, disable_radix_cache=False, cuda_graph_max_bs=32, cuda_graph_bs=None, disable_cuda_graph=False, disable_cuda_graph_padding=False, enable_profile_cuda_graph=False, enable_nccl_nvls=False, enable_tokenizer_batch_encode=False, disable_outlines_disk_cache=False, disable_custom_all_reduce=False, enable_mscclpp=False, disable_overlap_schedule=False, enable_mixed_chunk=False, enable_dp_attention=False, enable_dp_lm_head=False, enable_two_batch_overlap=False, enable_torch_compile=False, torch_compile_max_bs=32, torchao_config='', enable_nan_detection=False, enable_p2p_check=False, triton_attention_reduce_in_fp32=False, triton_attention_num_kv_splits=8, num_continuous_decode_steps=1, delete_ckpt_after_loading=False, enable_memory_saver=False, allow_auto_truncate=False, enable_custom_logit_processor=False, flashinfer_mla_disable_ragged=False, disable_shared_experts_fusion=False, disable_chunked_prefix_cache=False, disable_fast_image_processor=False, enable_return_hidden_states=False, enable_triton_kernel_moe=False, debug_tensor_dump_output_folder=None, debug_tensor_dump_input_file=None, debug_tensor_dump_inject=False, debug_tensor_dump_prefill_only=False, disaggregation_mode='null', disaggregation_transfer_backend='mooncake', disaggregation_bootstrap_port=8998, disaggregation_decode_tp=None, disaggregation_decode_dp=None, disaggregation_prefill_pp=1, disaggregation_ib_device=None, num_reserved_decode_tokens=512, pdlb_url=None, custom_weight_loader=[], weight_loader_disable_mmap=False, enable_pdmux=False, sm_group_num=3)
+/localhome/local-triv/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/localhome/local-triv/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/localhome/local-triv/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/localhome/local-triv/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+[2026-06-05 09:27:07] Init torch distributed begin.
+[2026-06-05 09:27:07] Init torch distributed ends. mem usage=0.00 GB
+[2026-06-05 09:27:08] Load weight begin. avail mem=78.74 GB
+[2026-06-05 09:27:08] Using model weights format ['*.safetensors']
+Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
+Loading safetensors checkpoint shards:  25% Completed | 1/4 [00:01<00:04,  1.49s/it]
+Loading safetensors checkpoint shards:  50% Completed | 2/4 [00:03<00:03,  1.54s/it]
+Loading safetensors checkpoint shards:  75% Completed | 3/4 [00:03<00:01,  1.05s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:05<00:00,  1.22s/it]
+Loading safetensors checkpoint shards: 100% Completed | 4/4 [00:05<00:00,  1.25s/it]
+
+[2026-06-05 09:27:14] Load weight end. type=LlamaForCausalLM, dtype=torch.bfloat16, avail mem=63.72 GB, mem usage=15.02 GB.
+[2026-06-05 09:27:14] KV Cache is allocated. #tokens: 457398, K size: 27.92 GB, V size: 27.92 GB
+[2026-06-05 09:27:14] Memory pool end. avail mem=7.67 GB
+[2026-06-05 09:27:14] Capture cuda graph begin. This can take up to several minutes. avail mem=7.66 GB
+[2026-06-05 09:27:14] Capture cuda graph bs [1, 2, 4, 8, 16, 24, 32]
+  0%|          | 0/7 [00:00<?, ?it/s]Capturing batches (bs=32 avail_mem=7.64 GB):   0%|          | 0/7 [00:00<?, ?it/s]Capturing batches (bs=32 avail_mem=7.64 GB):  14%|█▍        | 1/7 [00:02<00:12,  2.15s/it]Capturing batches (bs=24 avail_mem=7.57 GB):  14%|█▍        | 1/7 [00:02<00:12,  2.15s/it]Capturing batches (bs=24 avail_mem=7.57 GB):  29%|██▊       | 2/7 [00:02<00:05,  1.11s/it]Capturing batches (bs=16 avail_mem=7.57 GB):  29%|██▊       | 2/7 [00:02<00:05,  1.11s/it]Capturing batches (bs=16 avail_mem=7.57 GB):  43%|████▎     | 3/7 [00:02<00:03,  1.30it/s]Capturing batches (bs=8 avail_mem=7.54 GB):  43%|████▎     | 3/7 [00:02<00:03,  1.30it/s] Capturing batches (bs=8 avail_mem=7.54 GB):  57%|█████▋    | 4/7 [00:03<00:01,  1.63it/s]Capturing batches (bs=4 avail_mem=7.54 GB):  57%|█████▋    | 4/7 [00:03<00:01,  1.63it/s]Capturing batches (bs=4 avail_mem=7.54 GB):  71%|███████▏  | 5/7 [00:03<00:01,  1.90it/s]Capturing batches (bs=2 avail_mem=7.53 GB):  71%|███████▏  | 5/7 [00:03<00:01,  1.90it/s]Capturing batches (bs=2 avail_mem=7.53 GB):  86%|████████▌ | 6/7 [00:04<00:00,  2.09it/s]Capturing batches (bs=1 avail_mem=7.53 GB):  86%|████████▌ | 6/7 [00:04<00:00,  2.09it/s]Capturing batches (bs=1 avail_mem=7.53 GB): 100%|██████████| 7/7 [00:04<00:00,  2.13it/s]Capturing batches (bs=1 avail_mem=7.53 GB): 100%|██████████| 7/7 [00:04<00:00,  1.56it/s]
+[2026-06-05 09:27:19] Capture cuda graph end. Time elapsed: 4.55 s. mem usage=0.14 GB. avail mem=7.52 GB.
+[2026-06-05 09:27:20] max_total_num_tokens=457398, chunked_prefill_size=8192, max_prefill_tokens=16384, max_running_requests=256, context_len=131072, available_gpu_mem=7.52 GB
+[2026-06-05 09:27:21] INFO:     Started server process [821076]
+[2026-06-05 09:27:21] INFO:     Waiting for application startup.
+[2026-06-05 09:27:21] INFO:     Application startup complete.
+[2026-06-05 09:27:21] INFO:     Uvicorn running on http://127.0.0.1:30000 (Press CTRL+C to quit)
+[2026-06-05 09:27:22] INFO:     127.0.0.1:35806 - "GET /get_model_info HTTP/1.1" 200 OK
+[2026-06-05 09:27:22] Prefill batch. #new-seq: 1, #new-token: 7, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-06-05 09:27:22] INFO:     127.0.0.1:44606 - "GET /health HTTP/1.1" 200 OK
+[2026-06-05 09:27:23] INFO:     127.0.0.1:35822 - "POST /generate HTTP/1.1" 200 OK
+[2026-06-05 09:27:23] The server is fired up and ready to roll!
+[2026-06-05 09:27:30] INFO:     127.0.0.1:44618 - "POST /generate HTTP/1.1" 200 OK
+[2026-06-05 09:27:30] Prefill batch. #new-seq: 1, #new-token: 1000, #cached-token: 1, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-06-05 09:27:30] Cache flushed successfully!
+[2026-06-05 09:27:30] INFO:     127.0.0.1:44628 - "POST /flush_cache HTTP/1.1" 200 OK
+[2026-06-05 09:27:31] INFO:     127.0.0.1:44636 - "POST /generate HTTP/1.1" 200 OK
+[2026-06-05 09:27:31] INFO:     127.0.0.1:44650 - "POST /generate HTTP/1.1" 200 OK
+[2026-06-05 09:27:31] Prefill batch. #new-seq: 1, #new-token: 1001, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-06-05 09:27:31] Prefill batch. #new-seq: 1, #new-token: 1001, #cached-token: 0, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+[2026-06-05 09:27:32] INFO:     127.0.0.1:44656 - "GET /get_server_info HTTP/1.1" 200 OK
+[2026-06-05 09:27:40] INFO:     127.0.0.1:60080 - "POST /generate HTTP/1.1" 200 OK
+[2026-06-05 09:27:40] Prefill batch. #new-seq: 1, #new-token: 1, #cached-token: 1000, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-06-05 09:27:40] Decode batch. #running-req: 1, #token: 1022, token usage: 0.00, cuda graph: True, gen throughput (token/s): 2.90, #queue-req: 0, 
+[2026-06-05 09:27:41] Cache flushed successfully!
+[2026-06-05 09:27:41] INFO:     127.0.0.1:60086 - "POST /flush_cache HTTP/1.1" 200 OK
+[2026-06-05 09:27:42] INFO:     127.0.0.1:60096 - "POST /generate HTTP/1.1" 200 OK
+[2026-06-05 09:27:42] INFO:     127.0.0.1:60104 - "POST /generate HTTP/1.1" 200 OK
+[2026-06-05 09:27:42] Prefill batch. #new-seq: 1, #new-token: 1001, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-06-05 09:27:42] Prefill batch. #new-seq: 1, #new-token: 1000, #cached-token: 1, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+[2026-06-05 09:27:42] Decode batch. #running-req: 2, #token: 2082, token usage: 0.00, cuda graph: True, gen throughput (token/s): 44.77, #queue-req: 0, 
+[2026-06-05 09:27:43] Decode batch. #running-req: 2, #token: 2162, token usage: 0.00, cuda graph: True, gen throughput (token/s): 179.94, #queue-req: 0, 
+[2026-06-05 09:27:43] Decode batch. #running-req: 2, #token: 2242, token usage: 0.00, cuda graph: True, gen throughput (token/s): 179.31, #queue-req: 0, 
+[2026-06-05 09:27:43] Decode batch. #running-req: 2, #token: 2322, token usage: 0.01, cuda graph: True, gen throughput (token/s): 179.41, #queue-req: 0, 
+[2026-06-05 09:27:44] Decode batch. #running-req: 2, #token: 1, token usage: 0.00, cuda graph: True, gen throughput (token/s): 178.34, #queue-req: 0, 
+[2026-06-05 09:27:44] INFO:     127.0.0.1:45966 - "GET /get_server_info HTTP/1.1" 200 OK
+[2026-06-05 09:27:52] INFO:     127.0.0.1:37114 - "POST /generate HTTP/1.1" 200 OK
+[2026-06-05 09:27:52] Prefill batch. #new-seq: 1, #new-token: 1, #cached-token: 1000, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-06-05 09:27:53] Cache flushed successfully!
+[2026-06-05 09:27:53] INFO:     127.0.0.1:37126 - "POST /flush_cache HTTP/1.1" 200 OK
+[2026-06-05 09:27:54] INFO:     127.0.0.1:37136 - "POST /generate HTTP/1.1" 200 OK
+[2026-06-05 09:27:54] INFO:     127.0.0.1:37142 - "POST /generate HTTP/1.1" 200 OK
+[2026-06-05 09:27:54] Prefill batch. #new-seq: 1, #new-token: 1001, #cached-token: 0, token usage: 0.00, #running-req: 0, #queue-req: 0, 
+[2026-06-05 09:27:54] Prefill batch. #new-seq: 1, #new-token: 1000, #cached-token: 1, token usage: 0.00, #running-req: 1, #queue-req: 0, 
+[2026-06-05 09:27:54] INFO:     127.0.0.1:37144 - "GET /metrics HTTP/1.1" 404 Not Found
+[2026-06-05 09:27:54] SIGTERM received. signum=None frame=None. Draining requests and shutting down...
+[2026-06-05 09:27:54] Child process unexpectedly failed with exitcode=15. pid=821162
+[2026-06-05 09:27:54] Child process unexpectedly failed with exitcode=15. pid=821287
+[2026-06-05 09:27:54] Child process unexpectedly failed with exitcode=15. pid=821286
+[2026-06-05 09:27:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:28:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:29:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:30:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:31:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:32:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:33:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:34:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:35:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:36:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:37:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:38:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:39:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:40:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:41:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:42:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:43:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:44:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:45:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:46:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:47:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:48:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:49:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:42] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:47] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:52] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:50:57] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:51:02] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:51:07] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:51:12] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:51:17] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:51:22] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:51:27] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:51:32] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:51:36] INFO:     Shutting down
+[2026-06-05 09:51:36] INFO:     Waiting for background tasks to complete. (CTRL+C to force quit)
+[2026-06-05 09:51:37] Gracefully exiting... remaining number of requests 2
+[2026-06-05 09:51:38] INFO:     Waiting for application shutdown.
+[2026-06-05 09:51:38] INFO:     Application shutdown complete.
+[2026-06-05 09:51:38] INFO:     Finished server process [821076]

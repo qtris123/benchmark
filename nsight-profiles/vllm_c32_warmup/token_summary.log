@@ -1,0 +1,4 @@
+── Warmup token summary  ENGINE=vllm  concurrency=32 ──
+  Successful requests:                     32        
+  Total input tokens:                      32032     
+  Total generated tokens:                  640       

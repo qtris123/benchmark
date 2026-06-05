@@ -1,0 +1,39 @@
+/localhome/local-triv/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+benchmark_args=Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/datasets/fixed_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=96, sharegpt_output_len=1000, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=32, output_file='/localhome/local-triv/pareto-results/sglang_isl1000_osl1000_tp1/concurrency=32/bench_results.jsonl', output_details=True, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=True, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/datasets/fixed_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=96, sharegpt_output_len=1000, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=32, output_file='/localhome/local-triv/pareto-results/sglang_isl1000_osl1000_tp1/concurrency=32/bench_results.jsonl', output_details=True, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=True, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+
+#Input tokens: 96096
+#Output tokens: 96000
+Starting warmup with 1 sequences...
+Warmup completed with 1 sequences. Starting main benchmark run...
+  0%|          | 0/96 [00:00<?, ?it/s]  1%|          | 1/96 [00:39<1:02:39, 39.58s/it] 34%|███▍      | 33/96 [01:27<02:25,  2.31s/it]  68%|██████▊   | 65/96 [02:15<00:57,  1.84s/it]100%|██████████| 96/96 [02:15<00:00,  1.41s/it]
+
+============ Serving Benchmark Result ============
+Backend:                                 sglang    
+Traffic request rate:                    inf       
+Max request concurrency:                 32        
+Successful requests:                     96        
+Benchmark duration (s):                  135.59    
+Total input tokens:                      96096     
+Total generated tokens:                  96000     
+Total generated tokens (retokenized):    96000     
+Request throughput (req/s):              0.71      
+Input token throughput (tok/s):          708.72    
+Output token throughput (tok/s):         708.01    
+Total token throughput (tok/s):          1416.72   
+Concurrency:                             31.99     
+----------------End-to-End Latency----------------
+Mean E2E Latency (ms):                   45179.60  
+Median E2E Latency (ms):                 47761.87  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          5947.41   
+Median TTFT (ms):                        5143.82   
+P99 TTFT (ms):                           12048.77  
+---------------Inter-Token Latency----------------
+Mean ITL (ms):                           39.27     
+Median ITL (ms):                         34.93     
+P95 ITL (ms):                            43.74     
+P99 ITL (ms):                            48.09     
+Max ITL (ms):                            11685.95  
+==================================================

@@ -1,0 +1,39 @@
+/localhome/local-triv/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+benchmark_args=Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/nsight-profiles/dataset_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=32, sharegpt_output_len=200, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=32, output_file='/localhome/local-triv/nsight-profiles/sglang_c32_bench/bench.jsonl', output_details=False, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=True, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/nsight-profiles/dataset_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=32, sharegpt_output_len=200, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=32, output_file='/localhome/local-triv/nsight-profiles/sglang_c32_bench/bench.jsonl', output_details=False, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=True, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+
+#Input tokens: 32032
+#Output tokens: 6400
+Starting warmup with 1 sequences...
+Warmup completed with 1 sequences. Starting main benchmark run...
+  0%|          | 0/32 [00:00<?, ?it/s]  3%|▎         | 1/32 [00:05<03:01,  5.84s/it]100%|██████████| 32/32 [00:05<00:00,  5.45it/s]
+
+============ Serving Benchmark Result ============
+Backend:                                 sglang    
+Traffic request rate:                    inf       
+Max request concurrency:                 32        
+Successful requests:                     32        
+Benchmark duration (s):                  5.88      
+Total input tokens:                      32032     
+Total generated tokens:                  6400      
+Total generated tokens (retokenized):    6400      
+Request throughput (req/s):              5.44      
+Input token throughput (tok/s):          5447.99   
+Output token throughput (tok/s):         1088.51   
+Total token throughput (tok/s):          6536.50   
+Concurrency:                             31.92     
+----------------End-to-End Latency----------------
+Mean E2E Latency (ms):                   5865.31   
+Median E2E Latency (ms):                 5865.91   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          1675.15   
+Median TTFT (ms):                        1468.77   
+P99 TTFT (ms):                           2614.39   
+---------------Inter-Token Latency----------------
+Mean ITL (ms):                           21.06     
+Median ITL (ms):                         16.26     
+P95 ITL (ms):                            16.87     
+P99 ITL (ms):                            18.11     
+Max ITL (ms):                            2480.17   
+==================================================

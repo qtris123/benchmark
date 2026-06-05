@@ -1,0 +1,13 @@
+═══════════════════════════════════════════════════════════
+ Profile summary  ENGINE=vllm  concurrency=2
+ Captured at    : 2026-06-05 09:20:36
+ Mode           : DECODE ONLY (prefill detected via /metrics token counter)
+ Configuration  : 2 requests × 1000 in + 200 OSL
+ Captured       : ~20 decode steps over 5s
+ Decode batch   : 2  (all 2 requests decoding together)
+───────────────────────────────────────────────────────────
+ Warmup stats (representative of profiled decode):
+  Output token throughput (tok/s):         69.82     
+  Mean TPOT (ms):                          11.09     
+  Mean ITL (ms):                           11.09     
+═══════════════════════════════════════════════════════════

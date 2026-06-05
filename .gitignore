@@ -1,0 +1,11 @@
+# Nsight Systems binary profiles
+*.nsys-rep
+*.sqlite
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Large dataset files
+datasets/ShareGPT_V4.3_unfiltered_cleaned_split.json

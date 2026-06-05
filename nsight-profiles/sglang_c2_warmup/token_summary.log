@@ -1,0 +1,5 @@
+── Warmup token summary  ENGINE=sglang  concurrency=2 ──
+  Successful requests:                     2         
+  Total input tokens:                      2002      
+  Total generated tokens:                  40        
+  Total generated tokens (retokenized):    40        

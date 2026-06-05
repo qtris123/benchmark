@@ -1,0 +1,151 @@
+WARNING: HF_TOKEN not set. Llama models require HuggingFace access.
+  export HF_TOKEN=hf_... && huggingface-cli login
+  Or use an open model: MODEL=Qwen/Qwen2.5-7B-Instruct benchmarks/run_pareto_benchmark.sh
+=== Model: Qwen/Qwen3-8B ===
+=== Experiment: llama8b_1k1k_tp2 ===
+NVIDIA A100X, 81920 MiB
+NVIDIA A100X, 81920 MiB
+
+=== Running workload sweep (concurrency 1 → max) ===
+(APIServer pid=68401) Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+(Worker pid=68564) <frozen importlib._bootstrap_external>:1301: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+(Worker pid=68564) <frozen importlib._bootstrap_external>:1301: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+(Worker pid=68565) <frozen importlib._bootstrap_external>:1301: FutureWarning: The cuda.cudart module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.runtime module instead.
+(Worker pid=68565) <frozen importlib._bootstrap_external>:1301: FutureWarning: The cuda.nvrtc module is deprecated and will be removed in a future release, please switch to use the cuda.bindings.nvrtc module instead.
+[rank0]:[W602 04:24:57.602784631 ProcessGroupNCCL.cpp:1575] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+(EngineCore pid=68503) Process EngineCore:
+(EngineCore pid=68503) Traceback (most recent call last):
+(EngineCore pid=68503)   File "/localhome/local-triv/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+(EngineCore pid=68503)     self.run()
+(EngineCore pid=68503)   File "/localhome/local-triv/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/multiprocessing/process.py", line 108, in run
+(EngineCore pid=68503)     self._target(*self._args, **self._kwargs)
+(EngineCore pid=68503)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1169, in run_engine_core
+(EngineCore pid=68503)     raise e
+(EngineCore pid=68503)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 1139, in run_engine_core
+(EngineCore pid=68503)     engine_core = EngineCoreProc(*args, engine_index=dp_rank, **kwargs)
+(EngineCore pid=68503)                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=68503)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=68503)     return func(*args, **kwargs)
+(EngineCore pid=68503)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=68503)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 905, in __init__
+(EngineCore pid=68503)     super().__init__(
+(EngineCore pid=68503)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/engine/core.py", line 121, in __init__
+(EngineCore pid=68503)     self.model_executor = executor_class(vllm_config)
+(EngineCore pid=68503)                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=68503)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/executor/multiproc_executor.py", line 107, in __init__
+(EngineCore pid=68503)     super().__init__(vllm_config)
+(EngineCore pid=68503)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(EngineCore pid=68503)     return func(*args, **kwargs)
+(EngineCore pid=68503)            ^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=68503)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/executor/abstract.py", line 109, in __init__
+(EngineCore pid=68503)     self._init_executor()
+(EngineCore pid=68503)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/executor/multiproc_executor.py", line 200, in _init_executor
+(EngineCore pid=68503)     self.workers = WorkerProc.wait_for_ready(unready_workers)
+(EngineCore pid=68503)                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(EngineCore pid=68503)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/executor/multiproc_executor.py", line 747, in wait_for_ready
+(EngineCore pid=68503)     raise e from None
+(EngineCore pid=68503) Exception: WorkerProc initialization failed due to an exception in a background process. See stack trace for root cause.
+(APIServer pid=68401) Traceback (most recent call last):
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/bin/vllm", line 10, in <module>
+(APIServer pid=68401)     sys.exit(main())
+(APIServer pid=68401)              ^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 92, in main
+(APIServer pid=68401)     args.dispatch_function(args)
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/entrypoints/cli/serve.py", line 148, in cmd
+(APIServer pid=68401)     uvloop.run(run_server(args))
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+(APIServer pid=68401)     return __asyncio.run(
+(APIServer pid=68401)            ^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 195, in run
+(APIServer pid=68401)     return runner.run(main)
+(APIServer pid=68401)            ^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/asyncio/runners.py", line 118, in run
+(APIServer pid=68401)     return self._loop.run_until_complete(task)
+(APIServer pid=68401)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "uvloop/loop.pyx", line 1518, in uvloop.loop.Loop.run_until_complete
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+(APIServer pid=68401)     return await main
+(APIServer pid=68401)            ^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 678, in run_server
+(APIServer pid=68401)     await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 692, in run_server_worker
+(APIServer pid=68401)     async with build_async_engine_client(
+(APIServer pid=68401)                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=68401)     return await anext(self.gen)
+(APIServer pid=68401)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 100, in build_async_engine_client
+(APIServer pid=68401)     async with build_async_engine_client_from_engine_args(
+(APIServer pid=68401)                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 210, in __aenter__
+(APIServer pid=68401)     return await anext(self.gen)
+(APIServer pid=68401)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/entrypoints/openai/api_server.py", line 136, in build_async_engine_client_from_engine_args
+(APIServer pid=68401)     async_llm = AsyncLLM.from_vllm_config(
+(APIServer pid=68401)                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 217, in from_vllm_config
+(APIServer pid=68401)     return cls(
+(APIServer pid=68401)            ^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/engine/async_llm.py", line 146, in __init__
+(APIServer pid=68401)     self.engine_core = EngineCoreClient.make_async_mp_client(
+(APIServer pid=68401)                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(APIServer pid=68401)     return func(*args, **kwargs)
+(APIServer pid=68401)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 131, in make_async_mp_client
+(APIServer pid=68401)     return AsyncMPClient(*client_args)
+(APIServer pid=68401)            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/tracing/otel.py", line 178, in sync_wrapper
+(APIServer pid=68401)     return func(*args, **kwargs)
+(APIServer pid=68401)            ^^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 932, in __init__
+(APIServer pid=68401)     super().__init__(
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/engine/core_client.py", line 567, in __init__
+(APIServer pid=68401)     with launch_core_engines(
+(APIServer pid=68401)          ^^^^^^^^^^^^^^^^^^^^
+(APIServer pid=68401)   File "/localhome/local-triv/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 144, in __exit__
+(APIServer pid=68401)     next(self.gen)
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/engine/utils.py", line 1150, in launch_core_engines
+(APIServer pid=68401)     wait_for_engine_startup(
+(APIServer pid=68401)   File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/v1/engine/utils.py", line 1209, in wait_for_engine_startup
+(APIServer pid=68401)     raise RuntimeError(
+(APIServer pid=68401) RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+[BEGIN SERVER]
+Server overrides: {'_benchmark_name': 'tp2_a100', 'tensor_parallel_size': 2, 'max_num_seqs': 256, 'max_num_batched_tokens': 8192, 'gpu_memory_utilization': 0.9}
+Server command: ['vllm', 'serve', 'Qwen/Qwen3-8B', '--dtype', 'auto', '--tensor-parallel-size', '2', '--max-num-seqs', '256', '--max-num-batched-tokens', '8192', '--gpu-memory-utilization', '0.9']
+Traceback (most recent call last):
+  File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/benchmarks/sweep/serve.py", line 501, in run_ctx
+    yield
+  File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/benchmarks/sweep/serve_workload.py", line 303, in run_main
+    return explore_combs_workloads(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/benchmarks/sweep/serve_workload.py", line 218, in explore_combs_workloads
+    with server_ctx(
+         ^^^^^^^^^^^
+  File "/localhome/local-triv/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/benchmarks/sweep/serve.py", line 47, in run_server
+    server.wait_until_ready(timeout=server_ready_timeout)
+  File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/benchmarks/sweep/server.py", line 112, in wait_until_ready
+    raise RuntimeError(
+RuntimeError: Server process crashed with return code 1
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/localhome/local-triv/.venv/bin/vllm", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 92, in main
+    args.dispatch_function(args)
+  File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/benchmarks/sweep/serve_workload.py", line 321, in main
+    run_main(SweepServeWorkloadArgs.from_cli_args(args))
+  File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/benchmarks/sweep/serve_workload.py", line 302, in run_main
+    with args.run_ctx(experiment_dir):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/localhome/local-triv/.local/share/uv/python/cpython-3.12.13-linux-x86_64-gnu/lib/python3.12/contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "/localhome/local-triv/.venv/lib/python3.12/site-packages/vllm/benchmarks/sweep/serve.py", line 504, in run_ctx
+    raise RuntimeError(
+RuntimeError: The script was terminated early. Use `--resume` to continue the script from its last checkpoint.

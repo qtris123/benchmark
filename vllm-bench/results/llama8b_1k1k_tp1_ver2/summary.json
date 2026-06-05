@@ -1,0 +1,74 @@
+[
+  {
+    "concurrency": 1,
+    "output_throughput": 69.03958707182419,
+    "tps_per_gpu": 69.03958707182419,
+    "tps_per_user": 69.03958707182419,
+    "mean_ttft_ms": 126.74856733065099,
+    "mean_tpot_ms": 14.371696276948601,
+    "request_throughput": 0.06903958707182418
+  },
+  {
+    "concurrency": 2,
+    "output_throughput": 81.77583441865895,
+    "tps_per_gpu": 81.77583441865895,
+    "tps_per_user": 40.88791720932947,
+    "mean_ttft_ms": 216.67509717129482,
+    "mean_tpot_ms": 24.25960918835447,
+    "request_throughput": 0.08177583441865895
+  },
+  {
+    "concurrency": 4,
+    "output_throughput": 145.6873405592445,
+    "tps_per_gpu": 145.6873405592445,
+    "tps_per_user": 36.42183513981112,
+    "mean_ttft_ms": 675.0227184165851,
+    "mean_tpot_ms": 26.799511621537565,
+    "request_throughput": 0.14568734055924448
+  },
+  {
+    "concurrency": 8,
+    "output_throughput": 272.34908228623283,
+    "tps_per_gpu": 272.34908228623283,
+    "tps_per_user": 34.043635285779104,
+    "mean_ttft_ms": 2564.960926543184,
+    "mean_tpot_ms": 26.826241619160214,
+    "request_throughput": 0.27234908228623284
+  },
+  {
+    "concurrency": 16,
+    "output_throughput": 425.58667277274213,
+    "tps_per_gpu": 425.58667277274213,
+    "tps_per_user": 26.599167048296383,
+    "mean_ttft_ms": 2635.694573772222,
+    "mean_tpot_ms": 34.974577338210935,
+    "request_throughput": 0.42558667277274215
+  },
+  {
+    "concurrency": 32,
+    "output_throughput": 750.6106199801338,
+    "tps_per_gpu": 750.6106199801338,
+    "tps_per_user": 23.456581874379182,
+    "mean_ttft_ms": 3037.052516917356,
+    "mean_tpot_ms": 39.606615338993294,
+    "request_throughput": 0.7506106199801338
+  },
+  {
+    "concurrency": 64,
+    "output_throughput": 940.5965983551602,
+    "tps_per_gpu": 940.5965983551602,
+    "tps_per_user": 14.696821849299377,
+    "mean_ttft_ms": 3847.9264545564242,
+    "mean_tpot_ms": 64.20280452000384,
+    "request_throughput": 0.9405965983551601
+  },
+  {
+    "concurrency": 128,
+    "output_throughput": 1190.1166237609075,
+    "tps_per_gpu": 1190.1166237609075,
+    "tps_per_user": 9.29778612313209,
+    "mean_ttft_ms": 3433.4469259478433,
+    "mean_tpot_ms": 103.95879760860643,
+    "request_throughput": 1.1901166237609073
+  }
+]

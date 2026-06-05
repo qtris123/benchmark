@@ -1,0 +1,12 @@
+═══════════════════════════════════════════════════════════
+ Profile summary  ENGINE=sglang  concurrency=32
+ Captured at    : 2026-06-05 08:20:32
+ Mode           : DECODE ONLY (prefill skipped by 3s delay)
+ Configuration  : 32 requests × 1000 in + 200 OSL
+ Captured       : ~20 decode steps over 10s
+ Decode batch   : 32  (all 32 requests decoding together)
+───────────────────────────────────────────────────────────
+ Warmup stats (representative of profiled decode):
+  Output token throughput (tok/s):         216.66    
+  Mean ITL (ms):                           67.15     
+═══════════════════════════════════════════════════════════
