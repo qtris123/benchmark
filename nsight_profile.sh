@@ -135,12 +135,18 @@ PYEOF
 
 # ── Engine-specific settings ─────────────────────────────────────────────────
 if [[ "$ENGINE" == "sglang" ]]; then
-  source "$ROOT/sglang-env/bin/activate"
+  # The activate script has a stale hardcoded VIRTUAL_ENV path (was moved from ~/sglang-env).
+  # Use the absolute binary path directly instead of relying on broken PATH injection.
+  VENV_PYTHON="$ROOT/sglang-env/bin/python3"
+  if [[ ! -x "$VENV_PYTHON" ]]; then
+    echo "ERROR: sglang venv python not found at $VENV_PYTHON"
+    exit 1
+  fi
   source "$ROOT/sglang-bench/env.sh"
   SERVER_PORT=30000
   SERVER_HOST="127.0.0.1"
   SERVER_CMD=(
-    python3 -m sglang.launch_server
+    "$VENV_PYTHON" -m sglang.launch_server
     --model-path "$MODEL"
     --tp-size 1
     --port "$SERVER_PORT"
@@ -153,7 +159,7 @@ if [[ "$ENGINE" == "sglang" ]]; then
   )
   run_bench() {
     local C=$1 OUT_DIR=$2 N=$3
-    python3 -m sglang.bench_serving \
+    "$VENV_PYTHON" -m sglang.bench_serving \
       --backend sglang \
       --host "$SERVER_HOST" \
       --port "$SERVER_PORT" \
@@ -375,7 +381,16 @@ for C in "${PROFILE_CONCURRENCIES[@]}"; do
   _cleanup_server() {
     echo ""
     echo "  Stopping server (PID $LAUNCHER_PID)..."
+    local _pgid
+    _pgid=$(ps -o pgid= -p "$LAUNCHER_PID" 2>/dev/null | tr -d ' ') || true
     kill "$LAUNCHER_PID" 2>/dev/null || true
+    for _i in $(seq 1 10); do
+      kill -0 "$LAUNCHER_PID" 2>/dev/null || break
+      sleep 1
+    done
+    if [[ -n "$_pgid" ]] && kill -0 "$LAUNCHER_PID" 2>/dev/null; then
+      kill -9 -"$_pgid" 2>/dev/null || true
+    fi
     wait "$LAUNCHER_PID" 2>/dev/null || true
   }
   trap '_cleanup_server' EXIT
@@ -502,11 +517,13 @@ for C in "${PROFILE_CONCURRENCIES[@]}"; do
   # Supports both vllm (vllm:generation_tokens_total) and
   # sglang (sglang:new_generated_tokens_total).
   _get_gen_tokens() {
+    # curl -sf returns exit 22 for HTTP 4xx (sglang has no /metrics); suppress so
+    # set -euo pipefail does not kill the script when the endpoint is absent.
     curl -sf "http://${SERVER_HOST}:${SERVER_PORT}/metrics" 2>/dev/null \
       | awk '/^(vllm:generation_tokens_total|sglang:new_generated_tokens_total)(\{|[[:space:]])/ \
-             && !/^#/ { val=$NF } END { if (val!="") printf "%d\n", val }'
+             && !/^#/ { val=$NF } END { if (val!="") printf "%d\n", val }' || true
   }
-  _BASELINE=$(_get_gen_tokens)
+  _BASELINE=$(_get_gen_tokens || true)
   if [[ -z "$_BASELINE" ]]; then
     echo "    /metrics unavailable — decode detection skipped (proceeding immediately)."
   else
@@ -514,7 +531,7 @@ for C in "${PROFILE_CONCURRENCIES[@]}"; do
     _DECODE_POLLS=0
     _DECODE_MAX_POLLS=150  # 150 × 0.2 s = 30 s timeout
     while (( _DECODE_POLLS < _DECODE_MAX_POLLS )); do
-      _NOW=$(_get_gen_tokens)
+      _NOW=$(_get_gen_tokens || true)
       if [[ -n "$_NOW" ]] && (( _NOW > _BASELINE )); then
         printf "    Decode confirmed after %.1fs (%d → %d tokens generated)\n" \
           "$(echo "$_DECODE_POLLS * 0.2" | bc)" "$_BASELINE" "$_NOW"
@@ -579,8 +596,23 @@ for C in "${PROFILE_CONCURRENCIES[@]}"; do
   fi
 
   # ── Step 7: Kill server ───────────────────────────────────────────────────
+  # nsys spawns a multi-process tree (agent, launcher, tee, sglang workers).
+  # SIGTERM alone often leaves children alive; wait can hang indefinitely.
+  # Strategy: SIGTERM the launcher, give it 10 s, then SIGKILL the whole
+  # process group to guarantee clean exit.
   echo ">>> Stopping server ..."
+  LAUNCHER_PGID=$(ps -o pgid= -p "$LAUNCHER_PID" 2>/dev/null | tr -d ' ') || true
   kill "$LAUNCHER_PID" 2>/dev/null || true
+  # wait up to 10 s for graceful exit
+  for _i in $(seq 1 10); do
+    kill -0 "$LAUNCHER_PID" 2>/dev/null || break
+    sleep 1
+  done
+  # force-kill the whole process group if anything is still alive
+  if [[ -n "$LAUNCHER_PGID" ]] && kill -0 "$LAUNCHER_PID" 2>/dev/null; then
+    echo "    Server still alive after 10s — sending SIGKILL to pgid $LAUNCHER_PGID ..."
+    kill -9 -"$LAUNCHER_PGID" 2>/dev/null || true
+  fi
   wait "$LAUNCHER_PID" 2>/dev/null || true
   trap - EXIT  # clear per-iteration trap
 
