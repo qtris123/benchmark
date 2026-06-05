@@ -6,7 +6,7 @@
 #
 # Examples:
 #   bash sglang-bench/compare.sh llama8b_1k1k_tp1_sglang_ver2
-#   bash sglang-bench/compare.sh llama8b_1k1k_tp1_sglang_ver2 benchmarks/results/llama8b_1k1k_tp1_ver2
+#   bash sglang-bench/compare.sh llama8b_1k1k_tp1_sglang_ver2 vllm-bench/results/llama8b_1k1k_tp1_ver2
 #
 # Outputs:
 #   sglang-bench/results/<SGLANG_EXPERIMENT>/pareto/COMPARE.png
@@ -46,7 +46,7 @@ else
 fi
 
 # ── Resolve vLLM experiment directory ────────────────────────────────────────
-_vl_arg="${2:-${VLLM_EXPERIMENT_DIR:-$ROOT/benchmarks/results/llama8b_1k1k_tp1_ver2}}"
+_vl_arg="${2:-${VLLM_EXPERIMENT_DIR:-$ROOT/vllm-bench/results/llama8b_1k1k_tp1_ver2}}"
 if [[ -d "$_vl_arg" ]]; then
   VL_DIR="$(cd "$_vl_arg" && pwd)"
 else

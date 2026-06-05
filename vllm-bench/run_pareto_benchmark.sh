@@ -23,7 +23,7 @@ export UV_HTTP_TIMEOUT="${UV_HTTP_TIMEOUT:-600}"
 # ── Config ────────────────────────────────────────────────────────────────────
 MODEL="${MODEL:-meta-llama/Meta-Llama-3.1-8B-Instruct}"
 EXPERIMENT="${EXPERIMENT:-llama8b_sharegpt_osl1k_tp1}"
-OUTPUT_DIR="${OUTPUT_DIR:-benchmarks/results}"
+OUTPUT_DIR="${OUTPUT_DIR:-$ROOT/vllm-bench/results}"
 TP="${TP:-1}"
 SERVER_PORT="${SERVER_PORT:-8000}"
 ISL="${ISL:-1000}"   # informational label only; ShareGPT provides natural input lengths
@@ -47,8 +47,8 @@ else
   source .venv/bin/activate
 fi
 
-if [[ -f "benchmarks/env.sh" ]]; then
-  source benchmarks/env.sh
+if [[ -f "$ROOT/vllm-bench/env.sh" ]]; then
+  source "$ROOT/vllm-bench/env.sh"
 fi
 
 # ── GPU ops: fix stale /dev/nvidia-uvm after crash ───────────────────────────
@@ -118,7 +118,7 @@ if [[ -z "${HF_TOKEN:-}" && -z "${HUGGING_FACE_HUB_TOKEN:-}" ]]; then
   echo "  1. Accept license: https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct"
   echo "  2. hf auth login   OR   export HF_TOKEN=hf_..."
   echo "  3. Verify: hf auth whoami"
-  echo "  4. Re-run: bash benchmarks/run_pareto_benchmark.sh"
+  echo "  4. Re-run: bash benchmark/vllm-bench/run_pareto_benchmark.sh"
   exit 1
 fi
 export HF_TOKEN="${HF_TOKEN:-$HUGGING_FACE_HUB_TOKEN}"

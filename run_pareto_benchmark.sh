@@ -47,7 +47,7 @@ mkdir -p "$EXPERIMENT_DIR" "$DATASET_DIR"
 # ══════════════════════════════════════════════════════════════════════════════
 if [[ "$ENGINE" == "vllm" ]]; then
   source "$ROOT/.venv/bin/activate"
-  [[ -f "$ROOT/benchmarks/env.sh" ]] && source "$ROOT/benchmarks/env.sh"
+  [[ -f "$ROOT/vllm-bench/env.sh" ]] && source "$ROOT/vllm-bench/env.sh"
   SERVER_PORT="${SERVER_PORT:-8000}"
   SERVER_HOST="localhost"
   SERVER_CMD=(
