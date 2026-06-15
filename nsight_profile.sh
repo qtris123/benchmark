@@ -171,8 +171,7 @@ if [[ "$ENGINE" == "sglang" ]]; then
       --request-rate inf \
       --max-concurrency "$C" \
       --output-file "$OUT_DIR/bench.jsonl" \
-      --flush-cache \
-      --disable-ignore-eos \
+      #--flush-cache \
       2>&1 | tee "$OUT_DIR/bench.log"
   }
 
@@ -468,13 +467,13 @@ for C in "${PROFILE_CONCURRENCIES[@]}"; do
   mkdir -p "$BURNIN_DIR"
   echo ""
   echo ">>> Triton burn-in (C=$C, OSL=$BENCH_OSL) — pre-compiling JIT kernels for kv_len $((INPUT_LEN+1))–$((INPUT_LEN+BENCH_OSL)) ..."
-  (N_DECODE_STEPS=$BENCH_OSL; run_bench "$C" "$BURNIN_DIR" "$N_PROMPTS") 2>/dev/null || true
+  (N_DECODE_STEPS=$BENCH_OSL; run_bencudach "$C" "$BURNIN_DIR" "$N_PROMPTS") 2>/dev/null || true
   echo "    Burn-in done — triton attention kernels cached, KV cache flushed."
-
+A
   # ── Step 4: Launch benchmark in background with large OSL ─────────────────
   # The server will prefill all C requests then decode for BENCH_OSL steps.
   # nsys starts recording only after /metrics confirms decode has begun, so
-  # the captured window contains ONLY the decode phase.
+  # the captured window contains ONLY the decodetr phase.
   echo ""
   echo ">>> Launching background benchmark (C=$C, N=$N_PROMPTS, OSL=$BENCH_OSL) ..."
   (

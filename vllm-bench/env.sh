@@ -1,7 +1,15 @@
 # Source after: source .venv/bin/activate
 # Usage: source benchmarks/env.sh
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VENV_NVIDIA="$ROOT/.venv/lib/python3.12/site-packages/nvidia"
+# Locate the bundled nvidia libs inside whichever venv this checkout uses.
+# (This tree uses vllm-env; the original skill layout used .venv at the root.)
+VENV_NVIDIA=""
+for _venv in vllm-env .venv; do
+  if [[ -d "$ROOT/$_venv/lib/python3.12/site-packages/nvidia" ]]; then
+    VENV_NVIDIA="$ROOT/$_venv/lib/python3.12/site-packages/nvidia"
+    break
+  fi
+done
 
 # LD_LIBRARY_PATH: expose bundled CUDA runtime libs so PyTorch can find them
 CUDA_LIB_PATHS=()

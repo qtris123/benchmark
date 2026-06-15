@@ -1,0 +1,118 @@
+=== nsys: NVIDIA Nsight Systems version 2024.6.2.225-246235244400v0 ===
+=== GPU: auto-selected GPU 1 ===
+
+═══════════════════════════════════════════════════════════
+ MODEL          : meta-llama/Meta-Llama-3.1-8B-Instruct  (+ EAGLE3 draft: lmsys/sglang-EAGLE3-LLaMA3.1-Instruct-8B)
+ MODES          : baseline eagle3
+ CONCURRENCIES  : 2 8
+ PROMPTS        : natural ShareGPT, 128-1024 tok
+ DECODE STEPS   : 10 recorded  |  OSL: 160
+ EAGLE3         : num_steps=3 topk=4 draft_tokens=8
+ OUTPUT         : /localhome/local-triv/benchmark/eagle3-bench/decode-profiles  (*.nsys-rep → Nsight Systems GUI)
+═══════════════════════════════════════════════════════════
+    Curating natural prompts from ShareGPT (128-1024 tok) ...
+/localhome/local-triv/benchmark/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+    Dataset: 32 natural prompts  →  /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/prompts_sharegpt_128-1024.json
+
+─────────────────────────────────────────────────────────
+  Profiling  mode=baseline  concurrency=2  →  /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/baseline_c2.nsys-rep
+─────────────────────────────────────────────────────────
+>>> Launching server under nsys (session=baseline_c2_1031479) ...
+    Waiting for http://127.0.0.1:30000/health ...
+    Server ready (60s).
+    Warmup: 2 reqs × 160 tok ...
+    Firing profile batch: 2 reqs × 160 tok (decode-step baseline=160) ...
+>>> Waiting for full-batch (C=2) decode to start ...
+    Decode running.
+>>> nsys START (decode-only recording) ...
+>>> Recording decode steps 268 → 278 ...
+    Captured 10 steps.
+>>> nsys STOP ...
+Generating '/tmp/nsys-report-4970.qdstrm'
+[1/1] [0%                          ] baseline_c2.nsys-rep[1/1] [0%                          ] baseline_c2.nsys-rep[1/1] [6%                          ] baseline_c2.nsys-rep[1/1] [=======39%                  ] baseline_c2.nsys-rep[1/1] [========40%                 ] baseline_c2.nsys-rep[1/1] [=============60%            ] baseline_c2.nsys-rep[1/1] [===================81%      ] baseline_c2.nsys-rep[1/1] [========================100%] baseline_c2.nsys-rep[1/1] [========================100%] baseline_c2.nsys-rep
+Generated:
+    /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/baseline_c2.nsys-rep
+    Written: /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/baseline_c2.nsys-rep  (136K)
+>>> Stopping server ...
+    Sleeping 5s before next ...
+
+─────────────────────────────────────────────────────────
+  Profiling  mode=baseline  concurrency=8  →  /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/baseline_c8.nsys-rep
+─────────────────────────────────────────────────────────
+>>> Launching server under nsys (session=baseline_c8_1031479) ...
+    Waiting for http://127.0.0.1:30000/health ...
+    Server ready (60s).
+    Warmup: 8 reqs × 160 tok ...
+    Firing profile batch: 8 reqs × 160 tok (decode-step baseline=160) ...
+>>> Waiting for full-batch (C=8) decode to start ...
+    Decode running.
+>>> nsys START (decode-only recording) ...
+>>> Recording decode steps 264 → 274 ...
+    Captured 10 steps.
+>>> nsys STOP ...
+Generating '/tmp/nsys-report-e7b7.qdstrm'
+[1/1] [0%                          ] baseline_c8.nsys-rep[1/1] [0%                          ] baseline_c8.nsys-rep[1/1] [6%                          ] baseline_c8.nsys-rep[1/1] [=======38%                  ] baseline_c8.nsys-rep[1/1] [=============59%            ] baseline_c8.nsys-rep[1/1] [===================81%      ] baseline_c8.nsys-rep[1/1] [========================100%] baseline_c8.nsys-rep[1/1] [========================100%] baseline_c8.nsys-rep
+Generated:
+    /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/baseline_c8.nsys-rep
+    Written: /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/baseline_c8.nsys-rep  (136K)
+>>> Stopping server ...
+    Sleeping 5s before next ...
+
+─────────────────────────────────────────────────────────
+  Profiling  mode=eagle3  concurrency=2  →  /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/eagle3_c2.nsys-rep
+─────────────────────────────────────────────────────────
+>>> Launching server under nsys (session=eagle3_c2_1031479) ...
+    Waiting for http://127.0.0.1:30000/health ...
+    Server ready (80s).
+    Warmup: 2 reqs × 160 tok ...
+    Firing profile batch: 2 reqs × 160 tok (decode-step baseline=71) ...
+>>> Waiting for full-batch (C=2) decode to start ...
+    Decode running.
+>>> nsys START (decode-only recording) ...
+>>> Recording decode steps 131 → 141 ...
+    Batch finished early (marker 131).
+>>> nsys STOP ...
+Generating '/tmp/nsys-report-e400.qdstrm'
+[1/1] [0%                          ] eagle3_c2.nsys-rep[1/1] [0%                          ] eagle3_c2.nsys-rep[1/1] [===========53%              ] eagle3_c2.nsys-rep[1/1] [============54%             ] eagle3_c2.nsys-rep[1/1] [===============66%          ] eagle3_c2.nsys-rep[1/1] [===================79%      ] eagle3_c2.nsys-rep[1/1] [========================100%] eagle3_c2.nsys-rep[1/1] [========================100%] eagle3_c2.nsys-rep
+Generated:
+    /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/eagle3_c2.nsys-rep
+    EAGLE3 mean accept length (whole run): 2.16
+    Written: /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/eagle3_c2.nsys-rep  (176K)
+>>> Stopping server ...
+    Sleeping 5s before next ...
+
+─────────────────────────────────────────────────────────
+  Profiling  mode=eagle3  concurrency=8  →  /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/eagle3_c8.nsys-rep
+─────────────────────────────────────────────────────────
+>>> Launching server under nsys (session=eagle3_c8_1031479) ...
+    Waiting for http://127.0.0.1:30000/health ...
+    Server ready (76s).
+    Warmup: 8 reqs × 160 tok ...
+    Firing profile batch: 8 reqs × 160 tok (decode-step baseline=40) ...
+>>> Waiting for full-batch (C=8) decode to start ...
+    Decode running.
+>>> nsys START (decode-only recording) ...
+>>> Recording decode steps 84 → 94 ...
+    Batch finished early (marker 92).
+>>> nsys STOP ...
+Generating '/tmp/nsys-report-388c.qdstrm'
+[1/1] [0%                          ] eagle3_c8.nsys-rep[1/1] [0%                          ] eagle3_c8.nsys-rep[1/1] [6%                          ] eagle3_c8.nsys-rep[1/1] [12%                         ] eagle3_c8.nsys-rep[1/1] [6%                          ] eagle3_c8.nsys-rep[1/1] [11%                         ] eagle3_c8.nsys-rep[1/1] [==================75%       ] eagle3_c8.nsys-rep[1/1] [==================76%       ] eagle3_c8.nsys-rep[1/1] [========================100%] eagle3_c8.nsys-rep[1/1] [========================100%] eagle3_c8.nsys-rep
+Generated:
+    /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/eagle3_c8.nsys-rep
+    EAGLE3 mean accept length (whole run): 2.32
+    Written: /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/eagle3_c8.nsys-rep  (360K)
+>>> Stopping server ...
+    Sleeping 5s before next ...
+
+═══════════════════════════════════════════════════════════
+ All decode captures complete.
+   /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/baseline_c2.nsys-rep
+   /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/baseline_c8.nsys-rep
+   /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/eagle3_c2.nsys-rep
+   /localhome/local-triv/benchmark/eagle3-bench/decode-profiles/eagle3_c8.nsys-rep
+
+ View: copy *.nsys-rep to your machine and open in Nsight Systems GUI.
+ Compare baseline_c<C> vs eagle3_c<C>: the eagle3 trace shows num_steps=3
+ draft forwards + 1 target verify per decode iteration.
+═══════════════════════════════════════════════════════════

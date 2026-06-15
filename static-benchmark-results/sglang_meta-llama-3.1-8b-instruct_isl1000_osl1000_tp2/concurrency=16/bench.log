@@ -1,0 +1,39 @@
+/localhome/local-triv/benchmark/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+benchmark_args=Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/benchmark/datasets/fixed_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=48, sharegpt_output_len=1000, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=16, output_file='/localhome/local-triv/benchmark/static-benchmark-results/sglang_meta-llama-3.1-8b-instruct_isl1000_osl1000_tp2/concurrency=16/bench_results.jsonl', output_details=True, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/benchmark/datasets/fixed_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=48, sharegpt_output_len=1000, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=16, output_file='/localhome/local-triv/benchmark/static-benchmark-results/sglang_meta-llama-3.1-8b-instruct_isl1000_osl1000_tp2/concurrency=16/bench_results.jsonl', output_details=True, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+
+#Input tokens: 48048
+#Output tokens: 48000
+Starting warmup with 1 sequences...
+Warmup completed with 1 sequences. Starting main benchmark run...
+  0%|          | 0/48 [00:00<?, ?it/s]  2%|▏         | 1/48 [00:14<11:43, 14.97s/it] 35%|███▌      | 17/48 [00:34<00:55,  1.79s/it] 69%|██████▉   | 33/48 [00:53<00:21,  1.46s/it]100%|██████████| 48/48 [00:53<00:00,  1.12s/it]
+
+============ Serving Benchmark Result ============
+Backend:                                 sglang    
+Traffic request rate:                    inf       
+Max request concurrency:                 16        
+Successful requests:                     48        
+Benchmark duration (s):                  53.91     
+Total input tokens:                      48048     
+Total generated tokens:                  48000     
+Total generated tokens (retokenized):    48000     
+Request throughput (req/s):              0.89      
+Input token throughput (tok/s):          891.34    
+Output token throughput (tok/s):         890.45    
+Total token throughput (tok/s):          1781.78   
+Concurrency:                             15.99     
+----------------End-to-End Latency----------------
+Mean E2E Latency (ms):                   17959.44  
+Median E2E Latency (ms):                 19316.48  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          2521.81   
+Median TTFT (ms):                        2589.21   
+P99 TTFT (ms):                           3854.41   
+---------------Inter-Token Latency----------------
+Mean ITL (ms):                           15.45     
+Median ITL (ms):                         13.77     
+P95 ITL (ms):                            24.07     
+P99 ITL (ms):                            29.06     
+Max ITL (ms):                            3642.86   
+==================================================

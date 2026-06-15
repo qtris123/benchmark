@@ -1,0 +1,39 @@
+/localhome/local-triv/benchmark/sglang-env/lib/python3.12/site-packages/torch/cuda/__init__.py:61: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+benchmark_args=Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/benchmark/datasets/fixed_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=384, sharegpt_output_len=1000, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=128, output_file='/localhome/local-triv/benchmark/static-benchmark-results/sglang_meta-llama-3.1-8b-instruct_isl1000_osl1000_tp2/concurrency=128/bench_results.jsonl', output_details=True, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+Namespace(backend='sglang', base_url=None, host='127.0.0.1', port=30000, dataset_name='sharegpt', dataset_path='/localhome/local-triv/benchmark/datasets/fixed_isl1000.json', model='meta-llama/Meta-Llama-3.1-8B-Instruct', tokenizer=None, num_prompts=384, sharegpt_output_len=1000, sharegpt_context_len=None, random_input_len=1024, random_output_len=1024, random_range_ratio=0.0, request_rate=inf, max_concurrency=128, output_file='/localhome/local-triv/benchmark/static-benchmark-results/sglang_meta-llama-3.1-8b-instruct_isl1000_osl1000_tp2/concurrency=128/bench_results.jsonl', output_details=True, disable_tqdm=False, disable_stream=False, return_logprob=False, seed=1, disable_ignore_eos=False, extra_request_body=None, apply_chat_template=False, profile=False, lora_name=None, prompt_suffix='', pd_separated=False, flush_cache=True, warmup_requests=1, tokenize_prompt=False, gsp_num_groups=64, gsp_prompts_per_group=16, gsp_system_prompt_len=2048, gsp_question_len=128, gsp_output_len=256)
+
+#Input tokens: 384384
+#Output tokens: 384000
+Starting warmup with 1 sequences...
+Warmup completed with 1 sequences. Starting main benchmark run...
+  0%|          | 0/384 [00:00<?, ?it/s]  0%|          | 1/384 [01:16<8:10:02, 76.77s/it] 10%|▉         | 38/384 [01:16<08:14,  1.43s/it]  33%|███▎      | 128/384 [01:30<06:05,  1.43s/it] 34%|███▎      | 129/384 [02:35<04:11,  1.01it/s] 34%|███▍      | 130/384 [02:36<04:11,  1.01it/s] 67%|██████▋   | 256/384 [02:50<02:06,  1.01it/s] 67%|██████▋   | 257/384 [03:50<01:30,  1.40it/s] 67%|██████▋   | 258/384 [03:51<01:30,  1.40it/s]100%|██████████| 384/384 [03:51<00:00,  1.66it/s]
+
+============ Serving Benchmark Result ============
+Backend:                                 sglang    
+Traffic request rate:                    inf       
+Max request concurrency:                 128       
+Successful requests:                     384       
+Benchmark duration (s):                  231.85    
+Total input tokens:                      384384    
+Total generated tokens:                  384000    
+Total generated tokens (retokenized):    383991    
+Request throughput (req/s):              1.66      
+Input token throughput (tok/s):          1657.92   
+Output token throughput (tok/s):         1656.27   
+Total token throughput (tok/s):          3314.19   
+Concurrency:                             127.92    
+----------------End-to-End Latency----------------
+Mean E2E Latency (ms):                   77234.20  
+Median E2E Latency (ms):                 76830.60  
+---------------Time to First Token----------------
+Mean TTFT (ms):                          13302.02  
+Median TTFT (ms):                        13418.85  
+P99 TTFT (ms):                           24918.59  
+---------------Inter-Token Latency----------------
+Mean ITL (ms):                           64.00     
+Median ITL (ms):                         50.42     
+P95 ITL (ms):                            65.95     
+P99 ITL (ms):                            67.66     
+Max ITL (ms):                            24678.85  
+==================================================
